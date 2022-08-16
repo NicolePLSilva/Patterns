@@ -2,17 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ISubject : MonoBehaviour
+public interface ISubject 
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    void Attach(IObserver observer); //Adicionar observador 
+    void Detach(IObserver observer); //Remover observador
+    void Notify(); //Notificar observadores
 }
