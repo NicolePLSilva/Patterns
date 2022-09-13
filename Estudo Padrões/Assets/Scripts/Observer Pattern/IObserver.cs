@@ -4,5 +4,5 @@ using UnityEngine;
 
 public interface IObserver 
 {
-    void UpdateObserver(ISubject subject); //Atualizar observadores...passagem de parametro opcional
+    void UpdateObserver(ISubject subject, bool state); //Atualizar observadores...passagem de parametro opcional
 }

@@ -14,3 +14,8 @@ os notifique de uma mudança;
 
 -A classe de interesse é chamada de: Subject/Sujeito
 A classe interessada é chamada de: Observer/Observador
+
+-As classes observadoras precisam implemnetar uma mesma interface 
+e a classe de interesse deve se comunicar com elas através dessa interface
+
+
