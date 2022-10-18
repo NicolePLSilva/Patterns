@@ -19,8 +19,9 @@ namespace ObserverPattern
 
         private void Awake() 
         {
-                status = State.vermelho;
-                stateBool = false;
+                //status = State.vermelho;
+                //stateBool = false;
+                ClickGreen();
         }
 
         public void Attach(IObserver o)
@@ -31,12 +32,6 @@ namespace ObserverPattern
         public void Detach(IObserver o)
         {
             observers.Remove(o);
-        }
-
-        public void DoSomething()//realizar uma ação
-        {
-            Debug.Log("Realizando ação: ");
-            Notify();
         }
 
         public void ChangeStatus()
