@@ -7,10 +7,10 @@ namespace ObserverPattern
 {
     public class Subject : MonoBehaviour, ISubject 
     {
-        List<IObserver> observers = new List<IObserver>();//Armazena observadores dentro de uma coleção
+        List<IObserver> observers = new List<IObserver>();//stores observers within a collection
 
         
-        enum State{verde, amarelo,  vermelho};// Define Enum
+        enum State{green, yellow,  red};// Define Enum
 
         [SerializeField] State status; // Show in inspector
         [SerializeField] GameObject[] lightSprite;
@@ -19,8 +19,6 @@ namespace ObserverPattern
 
         private void Awake() 
         {
-                //status = State.vermelho;
-                //stateBool = false;
                 ClickGreen();
         }
 
@@ -36,44 +34,42 @@ namespace ObserverPattern
 
         public void ChangeStatus()
         {
-            Debug.Log("Notificando: mudou status para:" + status);
             Notify();
         }
 
         IEnumerator ChangingStatus(State newState)
         {
-            status = State.amarelo;
-            Debug.Log("Amarelo");
+            status = State.yellow;
+    
             lightSprite[2].SetActive(false);
             lightSprite[1].SetActive(true);
+
             ChangeStatus();
 
             yield return new WaitForSeconds(3);  
-            Debug.Log("New " + newState);
+
             lightSprite[1].SetActive(false);
             status = newState;
-            Debug.Log("Current " + status);
+  
             lightSprite[0].SetActive(true);
             ChangeStatus();
         }
 
         public void ClickRed()
         {
-            StartCoroutine(ChangingStatus(State.vermelho));
+            StartCoroutine(ChangingStatus(State.red));
             stateBool = false;
-            Debug.Log("Loading para Vermelho");
         }
 
         public void ClickGreen()
         {
-            //StartCoroutine(ChangingStatus(State.verde));
-            status = State.verde;
+
+            status = State.green;
             stateBool = true;
             lightSprite[2].SetActive(true);
             lightSprite[0].SetActive(false);
             
             ChangeStatus();
-            Debug.Log("Loading para Verde");
         }
 
 

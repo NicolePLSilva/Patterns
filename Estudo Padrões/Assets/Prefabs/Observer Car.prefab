@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2012383414712579484}
   - component: {fileID: 2012383414712579475}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Car Sprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -94,12 +94,12 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2012383415464760189}
-  - component: {fileID: 2012383415464760190}
   - component: {fileID: 2012383415464760188}
   - component: {fileID: 2012383415464760179}
-  m_Layer: 0
+  - component: {fileID: -2275777363736869663}
+  m_Layer: 6
   m_Name: Observer Car
-  m_TagString: Untagged
+  m_TagString: Car
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -121,25 +121,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2012383415464760190
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2012383415464760191}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f8b0755ba55b6964f9c6a7cde5019ade, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  horizontal: 1
-  speed: 1.8
-  initialSpeed: 0
-  maxVelocity: 3
-  startPosition: {fileID: 0}
-  canMove: 0
-  reductionZone: 0
 --- !u!50 &2012383415464760188
 Rigidbody2D:
   serializedVersion: 4
@@ -187,6 +168,25 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.7489204, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &-2275777363736869663
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2012383415464760191}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 96653a3d43845534385fcb2790eebc67, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  horizontal: 1
+  currentSpeed: 1.4
+  initialSpeed: 1.4
+  distanceToTheOther: 0.05
+  mask:
+    serializedVersion: 2
+    m_Bits: 64
 --- !u!1 &2770230744237101572
 GameObject:
   m_ObjectHideFlags: 0
@@ -197,7 +197,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1662120258929525440}
   - component: {fileID: 2238846117916509498}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: 9-Sliced (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -282,7 +282,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5530449553956403164}
   - component: {fileID: 3161742999719398998}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: 9-Sliced (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -367,7 +367,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8828594324135442723}
   - component: {fileID: 5978019495529788299}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: 9-Sliced
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -452,7 +452,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1438999485287755924}
   - component: {fileID: 3044893692214575070}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: 9-Sliced (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -536,7 +536,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2206828876251289344}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Glasses
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -574,7 +574,7 @@ GameObject:
   m_Component:
   - component: {fileID: 9115028473873149444}
   - component: {fileID: 9095502617392602579}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: 9-Sliced (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -659,7 +659,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1803096303125904596}
   - component: {fileID: 1973585574131027488}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: 9-Sliced (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}

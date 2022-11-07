@@ -30,7 +30,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &3153287384518782042
 MonoBehaviour:
@@ -46,5 +46,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   prefab: {fileID: 2012383415464760191, guid: cd9d7491213a3cb40bfd0136dde11460, type: 3}
   poolSize: 3
-  minSpawnTimer: 3
+  minSpawnTimer: 5
   MaxSpawnTimer: 8
