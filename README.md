@@ -1,3 +1,4 @@
 # Patterns
 Estudo de Padrões de Projetos
-Estudando...
+Observer - ok
+Object polling - ok
